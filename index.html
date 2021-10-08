@@ -38,7 +38,30 @@
                 background-color: rgb(135, 135, 241);
                 display: inline-block;
             }
-
+            .flex-ranks {
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: navy;
+            }
+            .flex-ranks > div {
+                background-color: lightgrey;
+                width: 80px;
+                margin: 10px;
+                text-align: center;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .grid-container {
+                display: inline-grid;
+                background-color: navy;
+            }
+            .grid-item {
+                background-color: white;
+                border: 1px solid black;
+                padding: 20px;
+                font-size: 20px;
+                text-align: center;
+            }
         </style>
     </head> 
     <body>
@@ -145,6 +168,15 @@
             <br>
             <input type="submit" value="Submit">
             <hr>
+            <div class="flex-ranks">
+                <div>Bronze</div>
+                <div>Silver</div>
+                <div>Gold</div>
+                <div>Platinum</div>
+                <div>Diamond</div>
+                <div>Master</div>
+                <div>Predator</div>
+            </div>
             <label for="myRank">Select your highest rank:</label>
             <br>
             <input list="ranks" id="myRank" name="myRank" />
@@ -158,6 +190,12 @@
                 <option value="Predator">
             </datalist>
             <br>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
             <label for="ranknum">Choose a subrank:</label><br>
             <select name="ranknum" id="ranknum">
                 <option value="1">1</option>
