@@ -10,13 +10,17 @@
             }
             h1 {
                 font-size: 35px;
+                font-family: "Copperplate", fantasy;
                 text-decoration: underline overline;
                 line-height: 2em;
                 margin: 50px 0px;
             }
             h2 {
                 font-size: 3ch;
+                font-family: "Copperplate", fantasy;
                 margin: 10px 20px;
+                background-color: rgb(135, 135, 241);
+                display: inline;
             }
             h3 {
                 width: 500px;
@@ -32,7 +36,40 @@
             img {
                 border: 5px solid rgb(0,0,128);
             }
-
+            footer {
+                background-color: rgb(135, 135, 241);
+                display: inline-block;
+            }
+            .flex-ranks {
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: navy;
+            }
+            .flex-ranks > div {
+                background-color: lightgrey;
+                width: 80px;
+                margin: 10px;
+                text-align: center;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .grid-container {
+                display: inline-grid;
+                background-color: navy;
+            }
+            .grid-item {
+                background-color: white;
+                border: 1px solid black;
+                padding: 20px;
+                font-size: 20px;
+                text-align: center;
+            }
+            /* for iphone x */
+            @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3){
+            }
+            /* for google pixel xl */
+            @media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 4){
+            }
         </style>
     </head> 
     <body>
@@ -139,6 +176,15 @@
             <br>
             <input type="submit" value="Submit">
             <hr>
+            <div class="flex-ranks">
+                <div>Bronze</div>
+                <div>Silver</div>
+                <div>Gold</div>
+                <div>Platinum</div>
+                <div>Diamond</div>
+                <div>Master</div>
+                <div>Predator</div>
+            </div>
             <label for="myRank">Select your highest rank:</label>
             <br>
             <input list="ranks" id="myRank" name="myRank" />
@@ -152,6 +198,12 @@
                 <option value="Predator">
             </datalist>
             <br>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
             <label for="ranknum">Choose a subrank:</label><br>
             <select name="ranknum" id="ranknum">
                 <option value="1">1</option>
